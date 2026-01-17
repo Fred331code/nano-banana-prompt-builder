@@ -1,0 +1,48 @@
+:root {
+  /* Premium Dark Theme Palette */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+  --bg-glass: rgba(20, 20, 20, 0.7);
+  
+  --accent-primary: #ffd700; /* Gold/Banana Yellow */
+  --accent-glow: rgba(255, 215, 0, 0.2);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+  
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar Polish */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-subtle);
+}
