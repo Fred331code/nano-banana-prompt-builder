@@ -103,5 +103,6 @@ export function ControlPanel({ settings, onUpdate, subject, onUpdateSubject }) {
                     onSelect={(val) => onUpdate('shot', val)}
                 />
             </div>
-            );
+        </div>
+    );
 }
