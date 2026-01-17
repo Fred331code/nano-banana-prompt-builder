@@ -40,3 +40,14 @@
 .subject-inputs input:last-child {
     margin-bottom: 0;
 }
+
+.section-title {
+    color: var(--accent-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}

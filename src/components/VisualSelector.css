@@ -44,12 +44,21 @@
     min-height: 100px;
     display: flex;
     flex-direction: column;
+    background-size: cover;
+    background-position: center;
+}
+
+.option-card.has-image {
+    min-height: 160px;
+    justify-content: flex-end;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .option-card:hover {
     border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
-    background: #1a1a1a;
+    background-color: #1a1a1a;
+    /* Fallback */
 }
 
 .option-card.selected {

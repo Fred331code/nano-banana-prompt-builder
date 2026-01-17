@@ -21,12 +21,13 @@ export function VisualSelector({ title, options, selected, onSelect }) {
                     return (
                         <button
                             key={option.id}
-                            className={`option-card ${isSelected ? 'selected' : ''}`}
+                            className={`option-card ${isSelected ? 'selected' : ''} ${option.image ? 'has-image' : ''}`}
                             onClick={() => onSelect(isSelected ? null : option)}
+                            style={option.image ? { backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%), url(${option.image})` } : {}}
                         >
                             <div className="card-content">
                                 <span className="card-label">{option.label}</span>
-                                <span className="card-desc">{option.description}</span>
+                                {!option.image && <span className="card-desc">{option.description}</span>}
                             </div>
                             {isSelected && <div className="active-indicator" />}
                         </button>

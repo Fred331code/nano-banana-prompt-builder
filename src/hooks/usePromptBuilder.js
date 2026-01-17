@@ -14,6 +14,11 @@ export function usePromptBuilder() {
         lighting: null, // object from LIGHTING
         angle: null, // object from ANGLES
         shot: null, // object from SHOTS
+        // New Aesthetic Layers
+        genre: null,
+        style: null,
+        look: null,
+        filter: null
     });
 
     const [mode, setMode] = useState('single'); // 'single' | 'multi-angle'
@@ -31,14 +36,22 @@ export function usePromptBuilder() {
 
         if (subjectPart) segments.push(subjectPart);
 
-        // 2. Technical Layer
+        // 2. Style & Genre Layer (Global Context)
+        if (settings.genre) segments.push(settings.genre.value);
+        if (settings.style) segments.push(settings.style.value);
+
+        // 3. Technical Layer
         if (settings.shot) segments.push(settings.shot.value);
         if (settings.angle) segments.push(settings.angle.value);
         if (settings.camera) segments.push(settings.camera.value);
         if (settings.lens) segments.push(settings.lens.value);
         if (settings.lighting) segments.push(settings.lighting.value);
 
-        // 3. Quality Boosters (Generic for now)
+        // 4. Finishing Layer (Looks & Filters)
+        if (settings.look) segments.push(settings.look.value);
+        if (settings.filter) segments.push(settings.filter.value);
+
+        // 5. Quality Boosters
         segments.push('hyper-realistic, 8k, cinematic color grading, masterpiece');
 
         return segments.join(', ');
@@ -87,7 +100,11 @@ export function usePromptBuilder() {
                 lens: settings.lens?.id,
                 lighting: settings.lighting?.id,
                 angle: settings.angle?.id,
-                shot: settings.shot?.id
+                shot: settings.shot?.id,
+                genre: settings.genre?.id,
+                style: settings.style?.id,
+                look: settings.look?.id,
+                filter: settings.filter?.id
             },
             generatedPrompt: prompt,
             variations: variations.map(v => ({ label: v.label, prompt: v.prompt }))
