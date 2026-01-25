@@ -13,7 +13,7 @@ export function usePromptBuilder() {
         lens: null, // object from LENSES
         lighting: null, // object from LIGHTING
         angle: null, // object from ANGLES
-        shot: null, // object from SHOTS
+        movement: null, // object from MOVEMENTS
         // New Aesthetic Layers
         genre: null,
         style: null,
@@ -41,8 +41,8 @@ export function usePromptBuilder() {
         if (settings.style) segments.push(settings.style.value);
 
         // 3. Technical Layer
-        if (settings.shot) segments.push(settings.shot.value);
         if (settings.angle) segments.push(settings.angle.value);
+        if (settings.movement) segments.push(settings.movement.value);
         if (settings.camera) segments.push(settings.camera.value);
         if (settings.lens) segments.push(settings.lens.value);
         if (settings.lighting) segments.push(settings.lighting.value);
@@ -100,7 +100,7 @@ export function usePromptBuilder() {
                 lens: settings.lens?.id,
                 lighting: settings.lighting?.id,
                 angle: settings.angle?.id,
-                shot: settings.shot?.id,
+                movement: settings.movement?.id,
                 genre: settings.genre?.id,
                 style: settings.style?.id,
                 look: settings.look?.id,

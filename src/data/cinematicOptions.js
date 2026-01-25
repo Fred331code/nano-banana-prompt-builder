@@ -26,19 +26,39 @@ export const LIGHTING = [
 ];
 
 export const ANGLES = [
-    { id: 'eye_level', label: 'Eye Level', description: 'Neutral perspective.', value: 'eye-level shot' },
-    { id: 'low_angle', label: 'Low Angle', description: 'Implies dominance.', value: 'low angle shot, looking up', image: '/assets/options/angle-low.png' },
-    { id: 'high_angle', label: 'High Angle', description: 'Implies vulnerability.', value: 'high angle shot, looking down' },
-    { id: 'bird_eye', label: 'Bird\'s Eye', description: 'Top-down view.', value: 'bird\'s eye view, top-down shot' },
-    { id: 'dutch', label: 'Dutch Angle', description: 'Tilted, disorienting.', value: 'Dutch angle shot, tilted horizon' },
-    { id: 'over_shoulder', label: 'Over Shoulder', description: 'Conversational.', value: 'over-the-shoulder shot' },
+    { id: 'closeup', label: 'Close-Up', description: 'Connection, engagement', value: 'Eye-level close-up shot, cinematic lighting, showing detailed facial expression', image: '/assets/options/angle-close-up.png' },
+    { id: 'extreme_closeup', label: 'Extreme Close-Up', description: 'Intimacy, intensity', value: 'Extreme close-up of face, showing detailed emotional expression, cinematic lighting', image: '/assets/options/angle-extreme-close-up.png' },
+    { id: 'macro', label: 'Macro Shot', description: 'Suspense, anticipation', value: 'Macro shot focusing on details, extreme detail, cinematic lighting', image: '/assets/options/angle-macro-shot.png' },
+    { id: 'medium', label: 'Medium Shot', description: 'Isolation, context', value: 'Medium shot standing in the environment, cinematic composition', image: '/assets/options/angle-medium-shot.png' },
+    { id: 'high_angle', label: 'High Angle', description: 'Defeat, submission', value: 'High angle shot seen from above, looking up, cinematic lighting', image: '/assets/options/angle-high-angle-shot.png' },
+    { id: 'low_angle', label: 'Low Angle', description: 'Hero moment, authority', value: 'Low angle shot seen from below, looking down, cinematic lighting, powerful stance', image: '/assets/options/angle-low-angle-shot.png' },
+    { id: 'eye_level', label: 'Eye Level', description: 'Neutral, equal relationship', value: 'Eye level shot, neutral angle, cinematic lighting', image: '/assets/options/angle-eye-level-shot.png' },
+    { id: 'low_closeup', label: 'Low Angle Close-Up', description: 'Powerful and intimate', value: 'Close-up shot, low angle seen from below, cinematic lighting', image: '/assets/options/angle-low-angle-close-up.png' },
+    { id: 'high_wide', label: 'High Angle Wide', description: 'Insignificance, isolation', value: 'Wide shot, high angle seen from above, showing full environment, cinematic lighting', image: '/assets/options/angle-high-angle-wide-shot.png' },
+    { id: 'low_extreme', label: 'Low Extreme CU', description: 'Maximum intensity', value: 'Extreme close-up of face, low angle from below, dramatic lighting', image: '/assets/options/angle-low-angle-extreme-close-up.png' },
+    { id: 'ots', label: 'Over-the-Shoulder', description: 'Observation, dialogue', value: 'Over the shoulder shot looking past subject, cinematic framing', image: '/assets/options/angle-over-the-shoulder.png' },
+    { id: 'bird_eye', label: 'Bird\'s Eye View', description: 'God\'s view, surveillance', value: 'Bird\'s eye view overhead shot, directly from above', image: '/assets/options/angle-birds-eye-view.png' },
+    { id: 'pov', label: 'Point of View', description: 'Maximum immersion', value: 'Point of view shot from perspective, looking out', image: '/assets/options/angle-point-of-view.png' },
+    { id: 'dutch', label: 'Dutch Angle', description: 'Tension, disorientation', value: 'Dutch angle tilted shot, off-kilter framing, cinematic lighting', image: '/assets/options/angle-dutch-angle.png' },
+    { id: 'two_shot', label: 'Two-Shot', description: 'Dialogue, conflict', value: 'Two-shot of characters standing together, cinematic framing', image: '/assets/options/angle-two-shot.png' },
+    { id: 'profile', label: 'Profile Shot', description: 'Contemplation, artistic', value: 'Side profile shot, cinematic lighting, sharp focus on facial features', image: '/assets/options/angle-profile-shot.png' },
+    { id: 'three_quarter', label: 'Three-Quarter', description: 'Natural, candid', value: 'Three-quarter angle shot, slightly turned from camera, cinematic lighting', image: '/assets/options/angle-three-quarter-angle.png' },
+    { id: 'worm', label: 'Worm\'s Eye View', description: 'Maximum power, epic', value: 'Extreme low angle worm\'s eye view, camera at ground level looking up, dramatic lighting', image: '/assets/options/angle-worms-eye-view.png' },
+    { id: 'canted', label: 'Canted Frame', description: 'Extreme chaos, madness', value: 'Extreme canted frame, heavily tilted angle, disorienting composition', image: '/assets/options/angle-canted-frame-extreme-dutch.png' },
+    { id: 'silhouette', label: 'Silhouette Shot', description: 'Mystery, drama', value: 'Silhouette shot backlit against background, dramatic contrast, cinematic composition', image: '/assets/options/angle-silhouette-shot.png' },
 ];
 
-export const SHOTS = [
-    { id: 'wide', label: 'Wide Shot', description: 'Establishes environment.', value: 'wide shot', image: '/assets/options/shot-wide.png' },
-    { id: 'medium', label: 'Medium Shot', description: 'Waist up standard.', value: 'medium shot' },
-    { id: 'closeup', label: 'Close-Up', description: 'Focus on emotion.', value: 'close-up shot' },
-    { id: 'extreme_closeup', label: 'Extreme Close-Up', description: 'Macro details.', value: 'extreme close-up' },
+export const MOVEMENTS = [
+    { id: 'tracking', label: 'Tracking / Dolly', description: 'Action, following', value: 'Smooth tracking shot following subject' },
+    { id: 'orbit', label: 'Orbit', description: 'Dramatic reveal', value: 'Camera orbits around subject, smooth rotation' },
+    { id: 'push_in', label: 'Push In', description: 'Building intensity', value: 'Slow push in toward subject, smooth forward camera movement' },
+    { id: 'pull_out', label: 'Pull Out', description: 'Revealing context', value: 'Slow pull out from subject, revealing environment' },
+    { id: 'handheld', label: 'Handheld', description: 'Raw, chaotic', value: 'Handheld camera movement, slight shake, raw cinematic style' },
+    { id: 'static', label: 'Static', description: 'Tension, intimate', value: 'Static camera, no movement, locked off shot' },
+    { id: 'crane_up', label: 'Crane Up', description: 'Epic reveal', value: 'Camera cranes up, rising movement revealing landscape' },
+    { id: 'crane_down', label: 'Crane Down', description: 'Dramatic approach', value: 'Camera cranes down toward subject, descending movement' },
+    { id: 'pan', label: 'Pan', description: 'Showing breadth', value: 'Slow horizontal pan, smooth sweeping movement' },
+    { id: 'tilt', label: 'Tilt', description: 'Character reveal', value: 'Slow tilt up, vertical camera movement, dramatic reveal' },
 ];
 
 // --- NEW STYLE & AESTHETICS CATEGORIES ---

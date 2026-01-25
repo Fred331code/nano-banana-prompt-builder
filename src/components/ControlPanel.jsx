@@ -1,4 +1,4 @@
-import { CAMERAS, LENSES, LIGHTING, ANGLES, SHOTS, GENRES, STYLES, LOOKS, FILTERS } from '../data/cinematicOptions';
+import { CAMERAS, LENSES, LIGHTING, ANGLES, MOVEMENTS, GENRES, STYLES, LOOKS, FILTERS } from '../data/cinematicOptions';
 import { VisualSelector } from './VisualSelector';
 import './ControlPanel.css';
 
@@ -90,17 +90,17 @@ export function ControlPanel({ settings, onUpdate, subject, onUpdateSubject }) {
                 />
 
                 <VisualSelector
-                    title="Camera Angle"
+                    title="Framing & Angle"
                     options={ANGLES}
                     selected={settings.angle}
                     onSelect={(val) => onUpdate('angle', val)}
                 />
 
                 <VisualSelector
-                    title="Shot Type"
-                    options={SHOTS}
-                    selected={settings.shot}
-                    onSelect={(val) => onUpdate('shot', val)}
+                    title="Camera Movement"
+                    options={MOVEMENTS}
+                    selected={settings.movement}
+                    onSelect={(val) => onUpdate('movement', val)}
                 />
             </div>
         </div>
